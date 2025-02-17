@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tealium Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="header">
+        <img src="msi_logo.png" alt="Motorola Solutions Logo" id="msi-logo">
+    </div>
+    <div id="form-container">
+        <h1>
+            Tealium Code Generator for Ceros
+            <span class="info-symbol"
+                title="Select the appropriate region, locale, and page type to generate the Tealium code.">i</span>
+        </h1>
+        <form id="tealium-form">
+            <label for="region">Region:</label>
+            <select id="region" name="region">
+                <option value="">Select Region</option>
+                <option value="EMEA">EMEA</option>
+                <option value="NAMR">NAMR</option>
+                <option value="APAC">APAC</option>
+                <option value="LACR">LACR</option>
+            </select><br><br>
+
+            <label for="locale">Locale:</label>
+            <select id="locale" name="locale" disabled>
+                <option value="">Select Locale</option>
+            </select><br><br>
+
+            <label for="page-type">Page Type:</label>
+            <select id="page-type" name="page-type">
+                <option value="landing">Landing</option>
+                <option value="thank you">Thank You</option>
+            </select><br><br>
+
+            <button type="submit">Generate Code</button>
+        </form>
+    </div>
+
+    <div id="results-container" style="display:none;">
+        <h2>Tealium Code</h2>
+        <div id="prod-code"></div>
+        <button id="copy-prod">Copy Prod Code</button><br><br>
+        <div id="nonprod-code"></div>
+        <button id="copy-nonprod">Copy Non-Prod Code</button><br><br>
+        <button id="start-over">Start Over</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

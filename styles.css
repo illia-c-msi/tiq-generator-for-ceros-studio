@@ -1,0 +1,90 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    align-items: center;
+    display: flex;
+}
+
+h1,
+h2 {
+    color: #004e89;
+}
+
+#header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#form-container,
+#results-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #004e89;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+#msi-logo {
+    height: auto;
+    max-width: 200px;
+    margin-right: 10px;
+}
+
+.info-symbol {
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: help;
+    display: inline-block;
+    font-style: italic;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    text-align: center;
+    width: 20px;
+}
+
+#prod-code,
+#nonprod-code {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    font-family: 'VT323', monospace;
+    overflow-x: auto;
+    padding: 10px;
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+}
+
+button {
+    -webkit-appearance: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
