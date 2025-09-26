@@ -13,7 +13,8 @@ $(document).ready(function () {
 		],
 		NAMR: [
 			{ value: 'en_us', label: 'en_us' },
-			{ value: 'en_ca', label: 'en_ca' },
+            { value: 'en_ca', label: 'en_ca' },
+            { value: 'fr_ca', label: 'fr_ca' },
 		],
 		APAC: [
 			{ value: 'en_xa', label: 'en_xa' },
