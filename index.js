@@ -13,8 +13,8 @@ $(document).ready(function () {
 		],
 		NAMR: [
 			{ value: 'en_us', label: 'en_us' },
-            { value: 'en_ca', label: 'en_ca' },
-            { value: 'fr_ca', label: 'fr_ca' },
+			{ value: 'en_ca', label: 'en_ca' },
+			{ value: 'fr_ca', label: 'fr_ca' },
 		],
 		APAC: [
 			{ value: 'en_xa', label: 'en_xa' },
@@ -29,6 +29,9 @@ $(document).ready(function () {
 			{ value: 'es_xl', label: 'es_xl' },
 			{ value: 'pt_xl', label: 'pt_xl' },
 		],
+		GLOBAL: [{ value: 'global', label: 'global' }],
+		INTL: [{ value: 'intl', label: 'intl' }],
+		Other: [{ value: 'other', label: 'other' }],
 	};
 	$('#region').change(function () {
 		const selectedRegion = $(this).val();
