@@ -32,6 +32,7 @@ h3 {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 20px;
+	margin-top: 70px;
 }
 
 #form-container,
@@ -58,7 +59,7 @@ select {
 
 button {
 	background-color: #004e89;
-	border: none;
+	border: 1px solid transparent;
 	border-radius: 4px;
 	color: #fff;
 	cursor: pointer;
@@ -68,6 +69,26 @@ button {
 	-webkit-appearance: none;
 	border-radius: 8px;
 	width: 100%;
+	transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#tealium-form {
+}
+
+#tealium-form button {
+	width: auto;
+	padding: 10px 30px;
+	font-size: 1em;
+}
+
+.form-submit-container {
+	text-align: center;
+	margin-top: 20px;
 }
 
 #msi-logo {
@@ -125,13 +146,16 @@ button {
 }
 
 #start-over-container {
-	text-align: center;
-	margin-top: 20px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
 }
 
 #start-over-container button {
 	width: auto;
-	padding: 10px 30px;
+	padding: 10px 20px;
+	background-color: #6c757d;
+	border-color: #6c757d;
 }
 
 #copy-prod {
@@ -141,4 +165,28 @@ button {
 #copy-nonprod {
 	background-color: #ffc107;
 	color: #333;
+}
+
+#copy-prod:hover {
+	background-color: #fff;
+	color: #28a745;
+	border-color: #28a745;
+}
+
+#copy-nonprod:hover {
+	background-color: #fff;
+	color: #ffc107;
+	border-color: #ffc107;
+}
+
+#start-over-container button:hover {
+	background-color: #fff;
+	color: #6c757d;
+	border-color: #6c757d;
+}
+
+#tealium-form button:hover {
+	background-color: #fff;
+	color: #004e89;
+	border-color: #004e89;
 }

@@ -21,25 +21,18 @@
 	</head>
 
 	<body>
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-NNTNJ6FQ"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden"
-			></iframe
-		></noscript>
+		<div id="start-over-container">
+			<button id="start-over">Start Over</button>
+		</div>
+
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNTNJ6FQ" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
 		<div id="header">
 			<img src="msi_logo.png" alt="Motorola Solutions Logo" id="msi-logo" />
 		</div>
 		<div id="form-container">
 			<h1>
 				Tealium Code Generator for Ceros
-				<span
-					class="info-symbol"
-					title="Select the appropriate region, locale, and page type to generate the Tealium code."
-					>i</span
-				>
+				<span class="info-symbol" title="Select the appropriate region, locale, and page type to generate the Tealium code.">i</span>
 			</h1>
 			<form id="tealium-form">
 				<label for="region">Region:</label>
@@ -64,7 +57,9 @@
 					<option value="other">Other</option></select
 				><br /><br />
 
-				<button type="submit">Generate Code</button>
+				<div class="form-submit-container">
+					<button type="submit">Generate Code</button>
+				</div>
 			</form>
 		</div>
 
@@ -82,10 +77,6 @@
 					<button id="copy-nonprod">Copy Non-Prod Code</button>
 				</div>
 			</div>
-		</div>
-
-		<div id="start-over-container">
-			<button id="start-over">Start Over</button>
 		</div>
 
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
