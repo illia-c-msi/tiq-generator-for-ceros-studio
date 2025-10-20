@@ -1,88 +1,106 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Tealium Code Generator</title>
-		<link rel="stylesheet" href="styles.css" />
-		<script>
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({
-					'gtm.start': new Date().getTime(),
-					'event': 'gtm.js',
-				});
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != 'dataLayer' ? '&l=' + l : '';
-				j.async = true;
-				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-				f.parentNode.insertBefore(j, f);
-			})(window, document, 'script', 'dataLayer', 'GTM-NNTNJ6FQ');
-		</script>
-	</head>
+  <head>
+    <title>Tealium Code Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NNTNJ6FQ");
+    </script>
+  </head>
 
-	<body>
-		<div id="start-over-container">
-			<button id="start-over">Start Over</button>
-		</div>
+  <body>
+    <div id="start-over-container">
+      <button id="start-over">Start Over</button>
+    </div>
 
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNTNJ6FQ" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-		<div id="header">
-			<img src="msi_logo.png" alt="Motorola Solutions Logo" id="msi-logo" />
-		</div>
-		<div id="form-container">
-			<h1>
-				Tealium Code Generator for Ceros
-				<span class="info-symbol" title="Select the appropriate region, locale, and page type to generate the Tealium code.">i</span>
-			</h1>
-			<form id="tealium-form">
-				<label for="region">Region:</label>
-				<select id="region" name="region">
-					<option value="">Select Region</option>
-					<option value="EMEA">EMEA</option>
-					<option value="NAMR">NAMR</option>
-					<option value="APAC">APAC</option>
-					<option value="LACR">LACR</option>
-					<option value="GLOBAL">GLOBAL</option>
-					<option value="INTL">INTL</option>
-					<option value="Other">Other</option></select
-				><br /><br />
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NNTNJ6FQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <div id="header">
+      <img src="msi_logo.png" alt="Motorola Solutions Logo" id="msi-logo" />
+    </div>
+    <div id="form-container">
+      <h1>
+        Tealium Code Generator for Ceros
+        <span
+          class="info-symbol"
+          title="Select the appropriate region, locale, and page type to generate the Tealium code."
+          >i</span
+        >
+      </h1>
+      <form id="tealium-form">
+        <label for="platform">Platform:</label>
+        <select id="platform" name="platform">
+          <option value="ceros">Ceros</option>
+          <option value="flex">Flex</option>
+          <option value="other">Other</option></select
+        ><br /><br />
 
-				<label for="locale">Locale:</label>
-				<select id="locale" name="locale" disabled>
-					<option value="">Select Locale</option></select
-				><br /><br />
+        <label for="region">Region:</label>
+        <select id="region" name="region">
+          <option value="">Select Region</option>
+          <option value="EMEA">EMEA</option>
+          <option value="NAMR">NAMR</option>
+          <option value="APAC">APAC</option>
+          <option value="LACR">LACR</option>
+          <option value="GLOBAL">GLOBAL</option>
+          <option value="INTL">INTL</option>
+          <option value="Other">Other</option></select
+        ><br /><br />
 
-				<label for="page-type">Page Type:</label>
-				<select id="page-type" name="page-type">
-					<option value="landing">Landing</option>
-					<option value="thankyou">Thank You</option>
-					<option value="internal">Internal</option>
-					<option value="other">Other</option></select
-				><br /><br />
+        <label for="locale">Locale:</label>
+        <select id="locale" name="locale" disabled>
+          <option value="">Select Locale</option></select
+        ><br /><br />
 
-				<div class="form-submit-container">
-					<button type="submit">Generate Code</button>
-				</div>
-			</form>
-		</div>
+        <label for="page-type">Page Type:</label>
+        <select id="page-type" name="page-type">
+          <option value="landing">Landing</option>
+          <option value="thankyou">Thank You</option>
+          <option value="internal">Internal</option>
+          <option value="other">Other</option></select
+        ><br /><br />
 
-		<div id="results-container" style="display: none">
-			<h2>Generated Tealium Code</h2>
-			<div id="code-columns-container">
-				<div class="code-column">
-					<h3>Production</h3>
-					<div id="prod-code"></div>
-					<button id="copy-prod">Copy Prod Code</button>
-				</div>
-				<div class="code-column">
-					<h3>Non-Production (QA)</h3>
-					<div id="nonprod-code"></div>
-					<button id="copy-nonprod">Copy Non-Prod Code</button>
-				</div>
-			</div>
-		</div>
+        <div class="form-submit-container">
+          <button type="submit">Generate Code</button>
+        </div>
+      </form>
+    </div>
 
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-		<script src="index.js"></script>
-	</body>
+    <div id="results-container" style="display: none">
+      <h2>Generated Tealium Code</h2>
+      <div id="code-columns-container">
+        <div class="code-column">
+          <h3>Production</h3>
+          <div id="prod-code"></div>
+          <button id="copy-prod">Copy Prod Code</button>
+        </div>
+        <div class="code-column">
+          <h3>Non-Production (QA)</h3>
+          <div id="nonprod-code"></div>
+          <button id="copy-nonprod">Copy Non-Prod Code</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
