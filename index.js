@@ -60,6 +60,7 @@ $(document).ready(function () {
     const region = $("#region").val();
     const locale = $("#locale").val();
     const pageType = $("#page-type").val();
+    const pageCategory = $("#page-category").val();
 
     if (!region || !locale || !pageType) {
       alert("Please select Region, Locale, and Page Type.");
@@ -73,6 +74,7 @@ $(document).ready(function () {
     region: '${region.toLowerCase()}',
     locale: '${locale}',
     page_type: '${pageType}',
+    page_category: '${pageCategory}',
 };`;
       const utagScript = `(function (a, b, c, d) {
     a = 'https://tags.tiqcdn.com/utag/motorola/campaign/${env}/utag.js';
